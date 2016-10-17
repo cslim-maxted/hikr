@@ -1,0 +1,7 @@
+/Users/chulseunglim/Library/Android/sdk/ndk-bundle
+9
+armeabi-v7a
+-O3 -g -DNDEBUG
+
+ -I/usr/local/share/uno/Packages/Fuse.Scripting.V8/0.38.6 -I/usr/local/share/uno/Packages/UnoCore/0.38.2/prebuilt/Android/include
+/Users/chulseunglim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/stlport

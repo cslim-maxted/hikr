@@ -1,0 +1,36 @@
+<Page ux:Class="EditHikePage">
+
+	<Router ux:Dependency="router" />
+
+    <JavaScript File="EditHikePage.js" />
+
+    <ScrollView>
+        <StackPanel>
+            <Text TextAlignment="Center" FontSize="40" Value="{name}" />
+
+            <Text>Name:</Text>
+            <TextBox Value="{name}" Margin="10"/>
+
+            <Text>Location:</Text>
+            <TextBox Value="{location}" Margin="10"/>
+
+            <Text>Distance (km):</Text>
+            <TextBox Value="{distance}" InputHint="Decimal" Margin="10"/>
+
+            <Text>Rating:</Text>
+            <TextBox Value="{rating}" InputHint="Integer" Margin="10"/>
+
+            <Text>Comments:</Text>
+            <TextView Value="{comments}" TextWrapping="Wrap" Margin="10"/>
+
+            <Button Text="Back" Clicked="{goBack}" Margin="10"/>
+
+        </StackPanel>
+    </ScrollView>
+
+    <Panel>
+	    <Circle Color="#bbfdff" />
+	    <Rectangle Color="#ff6eb4" />
+	</Panel>
+
+</Page>

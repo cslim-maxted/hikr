@@ -1,0 +1,4 @@
+$: -200207272
+BuildCommand: build.sh
+RunCommand: run.sh
+Product: hikr.apk

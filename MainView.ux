@@ -1,0 +1,15 @@
+<App>
+	<Router ux:Name="router" />
+
+	<ClientPanel>
+		<Navigator DefaultTemplate="home">
+			<HomePage ux:Template="home" router="router"/>
+			<EditHikePage ux:Template="editHike" router="router" />
+		</Navigator>
+
+		<!--PageControl>
+			<HomePage />
+			<EditHikePage />
+		</PageControl--> <!-- 페이지 이동 -->
+	</ClientPanel>
+</App>
