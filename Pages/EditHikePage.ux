@@ -23,14 +23,14 @@
             <Text>Comments:</Text>
             <TextView Value="{comments}" TextWrapping="Wrap" Margin="10"/>
 
-            <Button Text="Back" Clicked="{goBack}" Margin="10"/>
-
+            <Button Text="Save" Clicked="{save}" />
+            <Button Text="cancel" Clicked="{cancel}" />
         </StackPanel>
     </ScrollView>
 
-    <Panel>
+    <!--Panel>
 	    <Circle Color="#bbfdff" />
 	    <Rectangle Color="#ff6eb4" />
-	</Panel>
+	</Panel-->
 
 </Page>

@@ -1,4 +1,4 @@
-var hikes = require("hikes");
+var Context = require("Modules/Context");
 
 function goToHike(arg) {
 	// TODO
@@ -8,6 +8,6 @@ function goToHike(arg) {
 }
 
 module.exports = {
-	hikes: hikes,
+	hikes: Context.hikes,
 	goToHike: goToHike
 }
