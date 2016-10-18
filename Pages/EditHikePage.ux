@@ -3,11 +3,15 @@
 	<Router ux:Dependency="router" />
     <JavaScript File="EditHikePage.js" />
 
+    <!-- Activated -->
+    <Activated>
+        <DebugAction Message="Just Activiated!" />
+    </Activated>
+
+    <!-- UI -->
     <DockPanel>
-        
         <StackPanel Dock="Top" Margin="10" >
-            <hikr.Text TextAlignment="Center" FontSize="40" Value="{name}" />
-            <Rectangle Height="1" Background="White" />
+            <hikr.Text ux:Name="title" TextAlignment="Center" FontSize="40" Value="{name}" Width="0%" Height="0%"/>
         </StackPanel>
         <ScrollView>
             <StackPanel ItemSpacing="10" Padding="10">
@@ -28,7 +32,7 @@
 
                 <Grid ColumnCount="2">
                     <hikr.Button Text="Cancel" Clicked="{cancel}" />
-                    <hikr.Button Text="Save" Clicked="{Save}" />
+                    <hikr.Button Text="Save" Clicked="{save}" />
                 </Grid>
 
                 <!--Panel Clicked="{save}" Margin="10" Padding="10">
