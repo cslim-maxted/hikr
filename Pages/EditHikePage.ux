@@ -1,36 +1,59 @@
-<Page ux:Class="EditHikePage">
+<hikr.Page ux:Class="EditHikePage">
 
 	<Router ux:Dependency="router" />
-
     <JavaScript File="EditHikePage.js" />
 
-    <ScrollView>
-        <StackPanel>
-            <Text TextAlignment="Center" FontSize="40" Value="{name}" />
-
-            <Text>Name:</Text>
-            <TextBox Value="{name}" Margin="10"/>
-
-            <Text>Location:</Text>
-            <TextBox Value="{location}" Margin="10"/>
-
-            <Text>Distance (km):</Text>
-            <TextBox Value="{distance}" InputHint="Decimal" Margin="10"/>
-
-            <Text>Rating:</Text>
-            <TextBox Value="{rating}" InputHint="Integer" Margin="10"/>
-
-            <Text>Comments:</Text>
-            <TextView Value="{comments}" TextWrapping="Wrap" Margin="10"/>
-
-            <Button Text="Save" Clicked="{save}" />
-            <Button Text="cancel" Clicked="{cancel}" />
+    <DockPanel>
+        
+        <StackPanel Dock="Top" Margin="10" >
+            <hikr.Text TextAlignment="Center" FontSize="40" Value="{name}" />
+            <Rectangle Height="1" Background="White" />
         </StackPanel>
-    </ScrollView>
+        <ScrollView>
+            <StackPanel ItemSpacing="10" Padding="10">
+                <hikr.Text Value="Name:" Opacity=".6" />
+                <TextBox Value="{name}" Margin="10" TextColor="White"/>
+
+                <hikr.Text Value="Location:" Opacity=".6"/>
+                <TextBox Value="{location}" Margin="10" TextColor="White" />
+
+                <hikr.Text Value="Distance (km):" Opacity=".6"/>
+                <TextBox Value="{distance}" InputHint="Decimal" Margin="10" TextColor="White" />
+
+                <hikr.Text Value="Rating:" Opacity=".6"/>
+                <TextBox Value="{rating}" InputHint="Integer" Margin="10" TextColor="White" />
+
+                <hikr.Text Value="Comments:" Opacity=".6"/>
+                <TextView Value="{comments}" TextWrapping="Wrap" Margin="10" TextColor="White"/>
+
+                <Grid ColumnCount="2">
+                    <hikr.Button Text="Cancel" Clicked="{cancel}" />
+                    <hikr.Button Text="Save" Clicked="{Save}" />
+                </Grid>
+
+                <!--Panel Clicked="{save}" Margin="10" Padding="10">
+                    <string ux:Property="Text" />
+                    <Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+                        <DropShadow Angle="90" Distance="1" Spread="0.2" Size="2" Color="#00000060" />
+                    </Rectangle>
+                    <hikr.Text Value="{Property Text}" FontSize="16" TextAlignment="Center"/>
+
+                    <WhilePressed>
+                        <Scale Factor="0.95" Duration="0.08" Easing="QuadraticOut"/>
+                    </WhilePressed>
+                </Panel-->
+            </StackPanel>
+        </ScrollView>
+
+        <!--StackPanel Dock="Bottom" Orientation="Horizontal" Alignment="Center">
+                <Button Text="Save" Clicked="{save}" />
+                <Button Text="cancel" Clicked="{cancel}" />
+        </StackPanel-->
+    </DockPanel>
 
     <!--Panel>
 	    <Circle Color="#bbfdff" />
 	    <Rectangle Color="#ff6eb4" />
 	</Panel-->
 
-</Page>
+</hikr.Page>

@@ -1,13 +1,32 @@
-<Page ux:Class="HomePage">
+<hikr.Page ux:Class="HomePage">
+	<!--Image Layer="Background" File="../Assets/background.jpg" StretchMode="Fill" Opacity=".7" /-->
+
 
 	<Router ux:Dependency="router" />
-
 	<JavaScript File="HomePage.js" />
-	<ScrollView>
-		<StackPanel>
-		    <Each Items="{hikes}">
-		    	<Button Text="{name}" Clicked="{goToHike}" Margin="20" />
-			</Each>
-		</StackPanel>
-	</ScrollView>
-</Page>
+
+	<DockPanel>
+		<!-- title -->
+		<hikr.Text Color="White" Value="Recent Hikes" Margin="0, 40" FontSize="30" Alignment="Center" Dock="Top"/>
+		
+		<ScrollView>
+			<StackPanel>
+				<!-- list -->
+				<Rectangle ux:Class="Separator" Height="1" Fill="#fff4" />
+
+			    <Each Items="{hikes}">
+			    	<!--Button Text="{name}" Clicked="{goToHike}" Margin="20" /-->
+
+			    	<Separator />
+			    	<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goToHike}">
+			    		<hikr.Text Color="White" Value="{name}" Margin="20"/>
+			    		<WhilePressed>
+			    			<Scale Factor=".95" Duration=".08" Easing="QuadraticOut"/>
+			    		</WhilePressed>
+			    	</Panel>
+				</Each>
+				<Separator />
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</hikr.Page>
